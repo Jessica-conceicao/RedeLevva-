@@ -3,6 +3,8 @@ import Home from "./pages/Home/Index";
 import Login from "./pages/Login";
 import { BrowserRouter, Route, Routes} from "react-router-dom";
 
+import './mock'
+
 function App() {
   
   return (
