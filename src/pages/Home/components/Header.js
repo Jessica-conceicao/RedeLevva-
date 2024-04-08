@@ -9,6 +9,7 @@ import {Bell} from 'react-feather'
 import Avatar from '@mui/material/Avatar';
 
 
+
 const UseStyles = makeStyles({
     AppBar:{
     boxShadow:'none',
@@ -34,6 +35,10 @@ const UseStyles = makeStyles({
 
 function Header(){
     const classes = UseStyles();
+    const user= null
+    console.log(user)
+
+    
     return(
         <AppBar position="fixed" color="inherit" className={classes.AppBar}>
                <Toolbar>
@@ -46,7 +51,7 @@ function Header(){
                      <SvgIcon className={classes.bell}>
                         <Bell></Bell>
                      </SvgIcon>
-                     <Avatar alt="Travis Howard"  />
+                     <Avatar alt="Remy Sharp" src={user && user.avatar} />
                 </div>
                </Toolbar>
             </AppBar>

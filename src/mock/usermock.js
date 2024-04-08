@@ -10,24 +10,28 @@ import mock from '../utils/mock';
  // },
 //});
 
-mock.onPost('/api/home/login').reply(200, {
-//mock.onPost('/api/home/login').reply((config) => {
-  //const { email, password } = JSON.parse(config.data);
 
- // if (email !== 'jessicacoelho@conceicao.com.br' || password !== 'admin') {
-    //return [400, { message: 'Seu e-mail ou senha estão incorretos' }];
-//  }
+mock.onPost('api/home/login').reply((config) => {
 
-  //const user = {
+  const{email, password} =JSON.parse(config.data);
+
+  if (email !== 'jessicacoelho@conceicao.com.br' || password !== 'admin') {
+    return [400, { message: 'Seu e-mail ou senha estão incorretos' }];
+  }
+
+  const user = {
     id: 1,
-   // name: 'Jessica Coelho',
+    name: 'Jessica Coelho',
     username: 'jessiaConceica',
     email: 'jessicacoelho@conceicao.com.br',
-   // avatar: '/public/images/Avatars/Avatar3.png',
-//  };
+    avatar: '/images/Avatars/Avatar3.png',
+  };
 
-  //return [200, { user }];
+  return [200, {user}]
 });
+
+
+
 
 //mock.onGet('/api/home/user/jessicaConceicao').reply(200, {
   //id: 1,

@@ -8,8 +8,8 @@ import ListItem from '@mui/material/ListItem';
 
 const UseStyles = makeStyles({
     root:{
-        padding:16,
-        width:275,
+        padding:8,
+        width:205,
         marginRight:16,
     },
     button:{
@@ -36,7 +36,7 @@ function Navbar () {
            <ListSubheader>{'Tags em alta'} </ListSubheader>
            {
             tags.map((item) =>(
-               <ListItem dense button key ={'item-${item.id}-${item.name}'}>
+                <ListItem dense button key={`item-${item.id}-${item.name}`}>
                {`${item.name}`}
                </ListItem>
             ))}
