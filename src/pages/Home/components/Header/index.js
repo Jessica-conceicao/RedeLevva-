@@ -6,7 +6,9 @@ import Toolbar from '@mui/material/Toolbar';
 import { Button } from "@mui/material";
 import SvgIcon from '@mui/material/SvgIcon';
 import {Bell} from 'react-feather'
-import Avatar from '@mui/material/Avatar';
+
+
+import Account from "./Account";
 
 
 
@@ -51,7 +53,7 @@ function Header(){
                      <SvgIcon className={classes.bell}>
                         <Bell></Bell>
                      </SvgIcon>
-                     <Avatar alt="Remy Sharp" src={user && user.avatar} />
+                     <Account/>
                 </div>
                </Toolbar>
             </AppBar>

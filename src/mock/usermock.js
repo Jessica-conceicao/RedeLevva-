@@ -1,14 +1,14 @@
 import mock from '../utils/mock';
 
-//mock.onPost('/api/home/me').reply(200, {
-  //user: {
-   // id: 1,
-   // name: 'Jessica Coelho',
-   // username: 'jessiaConceicao',
-    //email: 'jessicacoelho@conceicao.com.br',
-    //avatar: '/public/images/Avatars/Avatar3.png',
- // },
-//});
+mock.onPost('/api/home/me').reply(200, {
+  user: {
+    id: 1,
+    //name: 'Jessica Coelho',
+    username: 'jessiaConceicao',
+    email: 'jessicacoelho@conceicao.com.br',
+    avatar: '/public/images/Avatars/Avatar3.png',
+ }
+});
 
 
 mock.onPost('api/home/login').reply((config) => {
