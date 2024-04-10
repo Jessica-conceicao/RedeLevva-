@@ -3,11 +3,10 @@ import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import { Button } from "@mui/material";
-import SvgIcon from '@mui/material/SvgIcon';
-import {Bell} from 'react-feather'
+import Box from '@mui/material/Box';
 
-
+import WritePost from "./WritePost";
+import Notifications from "./Notifications";
 import Account from "./Account";
 
 
@@ -26,12 +25,7 @@ const UseStyles = makeStyles({
     display:'flex',
     alignItems:'center',
    },
-   button:{
-    marginRight: 10,
-   },
-   bell:{
-    marginRight:10,
-   },
+
   
 });
 
@@ -47,13 +41,13 @@ function Header(){
                 <img src="/images/RLLogo.png" alt="logo" className={classes.img}/>
                 <div className={classes.grow}/>
                 <div className={classes.userSection}>
-                    <Button variant="contained" disableElevation className={classes.button}> 
-                    Novo post
-                     </Button>
-                     <SvgIcon className={classes.bell}>
-                        <Bell></Bell>
-                     </SvgIcon>
-                     <Account/>
+                  <WritePost/>
+                     <Box ml={2}>
+                     <Notifications/>
+                     </Box>
+                   <Box ml={2}>
+                   <Account/>
+                   </Box>
                 </div>
                </Toolbar>
             </AppBar>
