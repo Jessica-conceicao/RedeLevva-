@@ -32,11 +32,13 @@ function Account () {
 
     return (
     <>
-    <Avatar
-     ref={ref}
+  <Avatar
+    ref={ref}
     onClick={handleOpen} 
-    alt="Remy Sharp" src={account.user && account.user.avatar} 
-    />
+    alt="J" 
+    src={isAuthenticated && account.user && account.user.avatar}
+/>
+
     {
         isAuthenticated
         ?
