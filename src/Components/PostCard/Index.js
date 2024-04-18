@@ -53,7 +53,7 @@ function PostCard({ post }) {
                 subheader={
                     <div className={classes.subheader}> 
                     <Typography variant="caption"className={classes.caption}>
-                        {'Avaliado por'}
+                        {'Escrito por'}
                         </Typography>
                     <Typography variant="subtitle2" className={classes.caption} >
                         {post.author.name}
@@ -64,14 +64,18 @@ function PostCard({ post }) {
                     </div>
                 }
                 />              
-          <CardContent className={classes.content}>
-                <Typography>
-                    <CardActionArea>
-                        <img src={post.Image} className={classes.image} alt="img"/>
-                    </CardActionArea>
-                </Typography>
-            </CardContent>
+                    <CardContent className={classes.content}>
+                        <Typography className={classes.message} variant="body1">
+                          {post.description}
+                        </Typography>
+                        <Typography>
+                     <CardActionArea>
+                      <img src={post.Image} className={classes.image} alt="img" />
+                     </CardActionArea>
+                         </Typography>
+                    </CardContent>
             <CardActions disableSpacing>
+                
                 <IconButton aria-label="like">
                     <FavoriteIcon/>
                     <Typography

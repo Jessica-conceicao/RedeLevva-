@@ -1,8 +1,13 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
-import PostCard from "../../../Components/PostCard/Index";
 
-const UseStyles = makeStyles((theme) =>({
+import PostCard from "../../Components/PostCard/Index";
+import Navbar from "../Feed/Navbar"
+
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
+
+const UseStyles = makeStyles(() =>({
     root:{
 
     }
@@ -22,7 +27,7 @@ const posts =[
         Image:"/images/LogoRL.png",
         },
         {
-            id: 1,
+            id: 2,
             author:{
                 id:1,
                 name:'Luara Gabriela',
@@ -39,7 +44,11 @@ const posts =[
 
 function Feed () {
     const classes = UseStyles();
+
     return(
+        <Container maxWidth="lg">
+        <Box display="flex">
+        <Navbar/>
         <div className={classes.root}> 
             {
                 posts.map(post => (
@@ -47,7 +56,9 @@ function Feed () {
                 ))
             }
         </div>
-    )
+        </Box>
+        </Container>
+    );
 }
 
 export default Feed;
